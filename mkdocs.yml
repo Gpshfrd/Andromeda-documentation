@@ -35,5 +35,3 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Guide: guide.md
-  - About: about.md
