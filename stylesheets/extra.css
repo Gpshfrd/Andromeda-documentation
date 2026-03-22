@@ -1,0 +1,114 @@
+/* custom.css */
+
+/* CSS переменные для цветовой схемы */
+:root {
+  --text-primary: #15242A;
+  --accent: #67B0D1;
+  --dark-accent: #2F4D5A;
+  --background: #F8F9FA;
+  --disabled: #848484;
+  --code-bg: rgba(206, 218, 223, 0.5);
+  --code-bg-solid: #CEDADF;
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--background);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+button,
+.button,
+.btn {
+  background-color: var(--text-primary);
+  color: var(--background);
+  transition: all 0.2s ease;
+}
+
+button:hover,
+.button:hover,
+.btn:hover {
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+button:disabled,
+.button:disabled,
+.btn:disabled {
+  color: var(--disabled);
+  cursor: not-allowed;
+}
+
+.md-header,
+.navbar,
+.header {
+  background-color: var(--dark-accent);
+}
+
+code,
+pre,
+.highlight,
+.md-typeset code,
+.md-typeset pre {
+  background-color: var(--code-bg) !important;
+  border-radius: 4px;
+}
+
+.highlight,
+.md-typeset .highlight {
+  background-color: var(--code-bg) !important;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--dark-accent);
+  --md-accent-fg-color: var(--accent);
+  --md-default-bg-color: var(--background);
+  --md-code-bg-color: var(--code-bg);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-code-bg-color: rgba(206, 218, 223, 0.15);
+}
+
+blockquote {
+  border-left-color: var(--accent);
+  background-color: rgba(103, 176, 209, 0.1);
+}
+
+hr {
+  border-color: var(--disabled);
+  opacity: 0.3;
+}
+
+table:not(.highlighttable) {
+  border-color: var(--disabled);
+}
+
+th {
+  background-color: var(--dark-accent);
+  color: var(--background);
+}
+
+input,
+textarea,
+select {
+  border-color: var(--disabled);
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
