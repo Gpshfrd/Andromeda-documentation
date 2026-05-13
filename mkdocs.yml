@@ -1,37 +1,81 @@
-site_name: Andromeda documentation
-site_description: A modern documentation website built with MkDocs
+site_name: Andromeda Docs
+site_description: A modern documentation website built with MkDocs for online store
 site_author: Aliia Bashirova
 
 theme:
-  name: material
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - toc.integrate
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - content.code.annotate
-  palette:
-    primary: indigo
-    accent: deep orange
+    name: material
+    features:
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.expand
+        - navigation.top
+        - toc.integrate
+        - search.suggest
+        - search.highlight
+        - content.tabs.link
+        - content.code.annotate
+    palette:
+        - scheme: default
+          primary: indigo
+          accent: deep orange
 
 extra_css:
-  - stylesheets/extra.css
+    - stylesheets/extra.css
 
 plugins:
-  - search
-
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
-  - pymdownx.tabbed:
-      alternate_style: true
-  - attr_list
-  - tables
+    - search
 
 nav:
-  - Home: index.md
+    - Home: index.md
+
+    - For buyers:
+          - Main: for-buyers/index.md
+          - My Order:
+                - Overview: for-buyers/my-order/index.md
+                - Placing Orders: for-buyers/my-order/placing-orders.md
+                - Canceling Orders: for-buyers/my-order/canceling-orders.md
+                - Order Statuses: for-buyers/my-order/order-statuses.md
+                - Order Notifications: for-buyers/my-order/order-notifications.md
+          - Account:
+                - Overview: for-buyers/account/index.md
+                - Log in: for-buyers/account/log-in.md
+                - Account settings: for-buyers/account/account-settings.md
+                - Problems with access: for-buyers/account/access-problems.md
+          - Returns:
+                - Overview: for-buyers/returns/index.md
+                - Returning Products: for-buyers/returns/returning-products.md
+                - Returns Policy: for-buyers/returns/returns-policy.md
+                - Money Refund: for-buyers/returns/money-refund.md
+                - Packing Returns: for-buyers/returns/packing-returns.md
+          - Products:
+                - Overview: for-buyers/products/index.md
+                - Products Stock Availability: for-buyers/products/products-stock-availability.md
+                - Favorites: for-buyers/products/favorites.md
+                - Product Reviews: for-buyers/products/product-reviews.md
+          - Payment:
+                - Overview: for-buyers/payment/index.md
+                - Payment Methods: for-buyers/payment/payment-methods.md
+                - Changing Payment Method: for-buyers/payment/changing-payment-methods.md
+                - Payment Errors: for-buyers/payment/payment-errors.md
+                - Receipts and Confirmations: for-buyers/payment/receipts-and-confirmations.md
+
+    - For sellers:
+          - Main: for-sellers/index.md
+          - Products: for-sellers/products.md
+          - Working with Orders: for-sellers/orders.md
+          - Analytics: for-sellers/analytics.md
+
+markdown_extensions:
+    - admonition
+    - codehilite
+    - toc:
+          permalink: true
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.highlight
+    - pymdownx.inlinehilite
+    - pymdownx.tabbed:
+          alternate_style: true
+    - attr_list
+    - md_in_html
+    - tables
