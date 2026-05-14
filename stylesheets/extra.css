@@ -8,6 +8,7 @@
   --dark-accent: #2F4D5A;
   --background: #F8F9FA;
   --disabled: #848484;
+  --error: #d74040;
   --code-bg: rgba(206, 218, 223, 0.5);
   --code-bg-solid: #CEDADF;
 }
@@ -207,4 +208,30 @@ select:focus {
 
 .small-text {
   font-size: 14px;
+}
+
+.error-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: inherit;
+}
+.error-table th {
+  background-color: var(--background);
+  color: var(--accent);
+  text-align: left;
+  padding: 12px;
+  border: 1px solid var(--light-accent);
+  border-radius: 5px;
+  font-weight: 600;
+}
+.error-table td {
+  padding: 12px;
+  border: 1px solid var(--light-accent);
+  border-radius: 5px;
+  vertical-align: top;
+  background-color: var(--background);
+}
+.error-table tr:hover td {
+  background-color: var(--background);
 }
